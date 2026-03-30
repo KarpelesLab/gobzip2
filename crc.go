@@ -29,13 +29,6 @@ func crcUpdate(crc uint32, b byte) uint32 {
 	return (crc << 8) ^ crc32Table[(crc>>24)^uint32(b)]
 }
 
-func crcUpdateSlice(crc uint32, data []byte) uint32 {
-	for _, b := range data {
-		crc = (crc << 8) ^ crc32Table[(crc>>24)^uint32(b)]
-	}
-	return crc
-}
-
 func crcFinal(crc uint32) uint32 {
 	return ^crc
 }

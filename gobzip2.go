@@ -25,8 +25,6 @@ const (
 
 	symRUNA = 0
 	symRUNB = 1
-
-	nOvershoot = 2 + 12 + 18 + 2 // BZ_N_RADIX + BZ_N_QSORT + BZ_N_SHELL + 2 = 34
 )
 
 // StructuralError is returned when the bzip2 data is found to be syntactically invalid.
