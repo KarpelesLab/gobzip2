@@ -13,16 +13,16 @@ func TestDecompressSamples(t *testing.T) {
 		bz2 string
 		ref string
 	}{
-		{"bzip2-1.0.8/sample1.bz2", "bzip2-1.0.8/sample1.ref"},
-		{"bzip2-1.0.8/sample2.bz2", "bzip2-1.0.8/sample2.ref"},
-		{"bzip2-1.0.8/sample3.bz2", "bzip2-1.0.8/sample3.ref"},
+		{"testdata/sample1.bz2", "testdata/sample1.ref"},
+		{"testdata/sample2.bz2", "testdata/sample2.ref"},
+		{"testdata/sample3.bz2", "testdata/sample3.ref"},
 	}
 
 	for _, s := range samples {
 		t.Run(s.bz2, func(t *testing.T) {
 			bz2Data, err := os.Open(s.bz2)
 			if err != nil {
-				t.Skip("sample files not available:", err)
+				t.Fatal(err)
 			}
 			defer bz2Data.Close()
 
