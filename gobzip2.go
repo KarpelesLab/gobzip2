@@ -16,12 +16,12 @@ const (
 
 // Internal constants matching the bzip2 specification.
 const (
-	maxAlphaSize  = 258
-	maxCodeLen    = 23
-	nGroups       = 6
-	groupSize     = 50
-	nIters        = 4
-	maxSelectors  = 2 + (900000 / groupSize) // 18002
+	maxAlphaSize = 258
+	maxCodeLen   = 23
+	nGroups      = 6
+	groupSize    = 50
+	nIters       = 4
+	maxSelectors = 2 + (900000 / groupSize) // 18002
 
 	symRUNA = 0
 	symRUNB = 1

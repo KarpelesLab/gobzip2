@@ -110,7 +110,7 @@ func makeCodeLengths(lengths []byte, freq []int32, alphaSize, maxLen int) {
 			if d2 > d {
 				d = d2
 			}
-			weight[nNodes] = ((w1 >> 8) + (w2 >> 8))<<8 | (1 + d)
+			weight[nNodes] = ((w1>>8)+(w2>>8))<<8 | (1 + d)
 			parent[nNodes] = -1
 
 			nHeap++

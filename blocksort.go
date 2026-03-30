@@ -10,9 +10,9 @@ package gobzip2
 // This is a faithful translation of blocksort.c from bzip2 1.0.8.
 
 const (
-	sortRadix     = 2   // BZ_N_RADIX
-	sortQSort     = 12  // BZ_N_QSORT
-	sortShell     = 18  // BZ_N_SHELL
+	sortRadix     = 2  // BZ_N_RADIX
+	sortQSort     = 12 // BZ_N_QSORT
+	sortShell     = 18 // BZ_N_SHELL
 	sortOvershoot = sortRadix + sortQSort + sortShell + 2
 
 	mainQSortSmallThresh = 20
